@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Hero from './Components/Hero'
+import Navbar from './Components/NavBar'
 import { Container } from './Container'
 const Home: NextPage = () => {
 	return (
@@ -9,15 +11,9 @@ const Home: NextPage = () => {
 				<title>MONTZERA NFT Drop</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			<Navbar />
 
-
-			<Container>
-				<h1>Montzera NFT Drop</h1>
-				<p>
-					This is a simple Next.js project that uses Tailwind CSS with styled-components, and React.
-				</p>
-			</Container>
-
+			<Hero />
 		</div>
 	)
 }

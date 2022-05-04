@@ -19,6 +19,19 @@ mx-auto
 py-24
 justify-between
 space-x-72
+items-center
+`
+export const Button = tw.button`
+
+bg-gradient-to-r from-cyan-500 to-blue-500
+ hover:bg-blue-400
+ text-white 
+ font-bold 
+ py-2 px-4 
+ border-b-4 
+ border-blue-700
+ hover:border-blue-500 
+ rounded-full
 `
 
 
@@ -26,23 +39,23 @@ function Hero() {
 	return (
 		<OuterDev>
 			<InnerDev>
-				<div>
-					<Image src={monster1} alt="monster1" />
 
-				</div>
-				<div className='my-auto space-y-5 '>
-					<h1 className=' text-3xl md:text-5xl lg:text-8xl font-bold '>
+				<div className='my-auto space-y-16 mx-auto pl-6 xl:pl-0 '>
+					<h1 className=' text-3xl md:text-5xl lg:text-8xl font-bold font-mono '>
 						Monztera
 						NFT Collection
 					</h1>
 
-					<p>Lectus rhoncus nunc mattis viverra laoreet mi turpis  etiam  class vulputate auctor suscipit fermentum netus cras vehicula eget urna.
+					<p className='text-2xl'>Lectus rhoncus nunc mattis viverra laoreet mi turpis  etiam  class vulputate auctor suscipit fermentum netus cras vehicula eget urna.
 
 					</p>
 
-					<button className='items-center bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded'> connect your wallet </button>
+					<Button> connect your wallet </Button>
 				</div>
+				<div className='hidden md:inline-flex'>
+					<Image src={monster1} alt="monster1" />
 
+				</div>
 			</InnerDev>
 		</OuterDev>
 	)

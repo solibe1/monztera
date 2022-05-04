@@ -41,7 +41,7 @@ export default function Navbar() {
 									/>
 									<img
 										className="hidden lg:block h-8 w-auto"
-										src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+										src="https://monztera.1onestrong.com/wp-content/uploads/sites/3/2021/12/Group-5913.png"
 										alt="Workflow"
 									/>
 								</div>

@@ -1,9 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+import AboutUs from '../Components/AboutUs'
 import Hero from '../Components/Hero'
 import Navbar from '../Components/NavBar'
-import { Container } from './Container'
 const Home: NextPage = () => {
 	return (
 		<div className="w-full">
@@ -14,6 +13,7 @@ const Home: NextPage = () => {
 			<Navbar />
 
 			<Hero />
+			<AboutUs />
 		</div>
 	)
 }

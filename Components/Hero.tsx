@@ -52,7 +52,7 @@ function Hero() {
 
 					<Button> connect your wallet </Button>
 				</div>
-				<div className='hidden md:inline-flex'>
+				<div className=' pr-5 w-full hidden md:inline-flex ms:pr-0'>
 					<Image src={monster1} alt="monster1" />
 
 				</div>

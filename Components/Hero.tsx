@@ -7,7 +7,8 @@ import tw from "tailwind-styled-components"
 export const OuterDev = tw.div`
 
 text-white 
- w-full h-screen
+ w-full 
+ md:h-screen
  bg-[url('../images/background.jpg')]
  
 `

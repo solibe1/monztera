@@ -15,6 +15,7 @@ const Home: NextPage = () => {
 
 			<Hero />
 			<Divider />
+			<AboutUs />
 		</div>
 	)
 }

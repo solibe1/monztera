@@ -10,6 +10,7 @@ text-white
  w-full 
  md:h-screen
  bg-[url('../images/background.jpg')]
+ bg-cover
  
 `
 
@@ -54,7 +55,7 @@ function Hero() {
 					<Button> connect your wallet </Button>
 				</div>
 				<div className=' pr-5 w-full hidden md:inline-flex ms:pr-0'>
-					<Image src={monster1} alt="monster1" />
+					<Image className='' src={monster1} alt="monster1" />
 
 				</div>
 			</InnerDev>

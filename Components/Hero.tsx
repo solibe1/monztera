@@ -34,6 +34,7 @@ bg-gradient-to-r from-cyan-500 to-blue-500
  border-blue-700
  hover:border-blue-500 
  rounded-full
+ focus:outline-none focus:ring focus:ring-violet-300
 `
 
 

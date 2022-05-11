@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import AboutUs from '../Components/AboutUs'
 import Divider from '../Components/Divider'
+import Team from '../Components/Team'
 import Hero from '../Components/Hero'
 import Navbar from '../Components/NavBar'
 const Home: NextPage = () => {
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
 			<Hero />
 			<Divider />
 			<AboutUs />
+			<Team />
 		</div>
 	)
 }

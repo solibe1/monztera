@@ -24,7 +24,7 @@ function AboutUs() {
 					</p>
 				</div>
 				{/* right section */}
-				<div className="divide-y divide-dashed text-4xl space-y-11 text-gray-400 lg:col-span-6">
+				<div className="divide-y divide-dashed text-2xl space-y-11 text-gray-400 lg:col-span-6">
 					<div>01
 						High-quality rendered and equally affordable artwork
 					</div>

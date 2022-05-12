@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import AboutUs from '../Components/AboutUs'
-import Divider from '../Components/Divider'
-import Team from '../Components/Team'
-import Hero from '../Components/Hero'
-import Navbar from '../Components/NavBar'
+import AboutUs from '../components/AboutUs'
+import Divider from '../components/Divider'
+import Team from '../components/Team'
+import Hero from '../components/Hero'
+import Navbar from '../components/NavBar'
 const Home: NextPage = () => {
 	return (
 		<div className="w-full">
@@ -13,7 +13,6 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Navbar />
-			<h1 className='text-red-600'> testttttttttttttttt</h1>
 
 			<Hero />
 			<Divider />

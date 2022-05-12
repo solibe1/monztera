@@ -33,7 +33,7 @@ function AboutUs() {
 					<div>03
 						The immersive world of NFTs with all its collectors and projects</div>
 					<div>04
-						Slow, steady, and natural community growth within the Lazy Lounge Club</div>
+						SlowW, steady, and natural community growth within the Lazy Lounge Club</div>
 
 				</div>
 

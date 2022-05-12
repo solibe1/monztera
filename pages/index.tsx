@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import AboutUs from '../components/AboutUs'
-import Divider from '../components/Divider'
-import Team from '../components/Team'
-import Hero from '../components/Hero'
-import Navbar from '../components/NavBar'
+import AboutUs from '../Components/AboutUs'
+import Divider from '../Components/Divider'
+import Team from '../Components/Team'
+import Hero from '../Components/Hero'
+import Navbar from '../Components/NavBar'
 const Home: NextPage = () => {
 	return (
 		<div className="w-full">

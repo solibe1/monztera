@@ -2,7 +2,6 @@ import React from 'react'
 import tw from "tailwind-styled-components"
 import { OuterDev } from './Hero'
 
-
 const OuterDev2 = tw(OuterDev)`
 bg-[url('../images/background2.jpg')]
 `

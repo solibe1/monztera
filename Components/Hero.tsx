@@ -11,6 +11,7 @@ text-white
  md:h-screen
  bg-[url('../images/background.jpg')]
  bg-cover
+
  
 `
 
@@ -40,7 +41,7 @@ bg-gradient-to-r from-cyan-500 to-blue-500
 
 function Hero() {
 	return (
-		<OuterDev>
+		<OuterDev id="Home">
 			<InnerDev>
 
 				<div className='my-auto space-y-16 mx-auto pl-6 xl:pl-0 '>

@@ -11,7 +11,7 @@ bg-[url('../images/background2.jpg')]
 
 function AboutUs() {
 	return (
-		<OuterDev2>
+		<OuterDev2 id="About">
 			<div className="container pt-6 pl-6 mx-auto space-y-5 lg:grid lg:grid-cols-12 lg:pl-0 ">
 				{/* left section */}
 				<div className=' divide-x  divide-blue-500 space-y-7 lg:col-span-6'>

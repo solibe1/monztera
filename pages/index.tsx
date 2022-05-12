@@ -5,6 +5,9 @@ import Divider from '../Components/Divider'
 import Team from '../Components/Team'
 import Hero from '../Components/Hero'
 import Navbar from '../Components/NavBar'
+import * as Scroll from 'react-scroll';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 const Home: NextPage = () => {
 	return (
 		<div className="w-full">

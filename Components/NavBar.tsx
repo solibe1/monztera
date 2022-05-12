@@ -37,7 +37,8 @@ export default function Navbar() {
 									<Link
 										to="Home"
 										smooth={true}
-										duration={500}>
+										duration={500}
+									>
 										<img
 											className="block lg:hidden h-8 w-auto"
 											src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
@@ -58,6 +59,7 @@ export default function Navbar() {
 												to={item.href}
 												smooth={true}
 												duration={500}
+												offset={-60}
 												className={classNames(
 													item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
 													'px-3 py-2 rounded-md text-sm font-medium'

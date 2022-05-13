@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import monster1 from '../images/monster1.png'
+import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
+
 
 
 import tw from "tailwind-styled-components"
@@ -40,6 +42,12 @@ bg-gradient-to-r from-cyan-500 to-blue-500
 
 
 function Hero() {
+	//auth
+	const connectWithMetamask = useMetamask();
+	const address = useAddress();
+	const disconnect = useDisconnect();
+
+
 	return (
 		<OuterDev id="Home">
 			<InnerDev>
@@ -54,7 +62,7 @@ function Hero() {
 
 					</p>
 
-					<Button> connect your wallet </Button>
+					<Button onClick={() => connectWithMetamask()}> connect your wallet </Button>
 				</div>
 				<div className=' pr-5 w-full hidden md:inline-flex ms:pr-0 '>
 					<Image className='' src={monster1} alt="monster1" />

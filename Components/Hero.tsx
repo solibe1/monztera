@@ -62,7 +62,9 @@ function Hero() {
 
 					</p>
 
-					<Button onClick={() => connectWithMetamask()}> connect your wallet </Button>
+					<Button onClick={() => address ? disconnect() : connectWithMetamask()}>
+						{address ? "wallet connected" : "connect your wallet"}
+					</Button>
 				</div>
 				<div className=' pr-5 w-full hidden md:inline-flex ms:pr-0 '>
 					<Image className='' src={monster1} alt="monster1" />

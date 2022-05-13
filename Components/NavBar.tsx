@@ -16,7 +16,7 @@ function classNames(...classes: any) {
 
 export default function Navbar() {
 	return (
-		<Disclosure as="nav" className="bg-gray-800 sticky top-0 z-10">
+		<Disclosure as="nav" className="bg-gray-800 sticky top-0 z-1">
 			{({ open }) => (
 				<>
 					<div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -143,10 +143,13 @@ export default function Navbar() {
 					<Disclosure.Panel className="sm:hidden">
 						<div className="px-2 pt-2 pb-3 space-y-1">
 							{navigation.map((item) => (
-								<Disclosure.Button
+								<Link
 									key={item.name}
 									as="a"
-									href={item.href}
+									to={item.href}
+									smooth={true}
+									duration={500}
+									offset={-60}
 									className={classNames(
 										item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
 										'block px-3 py-2 rounded-md text-base font-medium'
@@ -154,7 +157,7 @@ export default function Navbar() {
 									aria-current={item.current ? 'page' : undefined}
 								>
 									{item.name}
-								</Disclosure.Button>
+								</Link>
 							))}
 						</div>
 					</Disclosure.Panel>
@@ -163,3 +166,4 @@ export default function Navbar() {
 		</Disclosure>
 	)
 }
+

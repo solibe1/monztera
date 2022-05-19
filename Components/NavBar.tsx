@@ -87,7 +87,7 @@ export default function Navbar() {
 									<div>
 										{address && <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
 											<span className="sr-only">Open user menu</span>
-											<p className='text-white'>Wallet Connected: {address.substring(0, 5)}...{address.length - 5}</p>
+											<p className='text-white'>Wallet Connected: {address.substring(0, 3)}...{address.substring(address.length - 3, address.length)}</p>
 										</Menu.Button>}
 									</div>
 									<Transition

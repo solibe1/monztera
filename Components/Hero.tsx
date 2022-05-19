@@ -10,7 +10,6 @@ export const OuterDev = tw.div`
 
 text-white 
  w-full 
- 
  bg-[url('../images/background.jpg')]
  bg-cover
 

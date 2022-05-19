@@ -4,7 +4,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from 'react-scroll'
 import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
-
+import logo from '../images/logo.png'
 
 
 
@@ -53,7 +53,7 @@ export default function Navbar() {
 										/>
 										<img
 											className="hidden lg:block h-8 w-auto"
-											src="https://monztera.1onestrong.com/wp-content/uploads/sites/3/2021/12/Group-5913.png"
+											src={logo.src}
 											alt="Workflow"
 										/>
 									</Link>

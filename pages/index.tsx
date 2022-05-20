@@ -5,7 +5,12 @@ import Divider from '../Components/Divider'
 import Team from '../Components/Team'
 import Hero from '../Components/Hero'
 import Navbar from '../Components/NavBar'
+import Mint from '../Components/Mint'
+import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
+
 const Home: NextPage = () => {
+	const address = useAddress();
+
 	return (
 		<div className="w-full">
 			<Head>
@@ -15,6 +20,7 @@ const Home: NextPage = () => {
 			<Navbar />
 			<Hero />
 			<Divider />
+			{address && <Mint />}
 			<AboutUs />
 			<Team />
 		</div>

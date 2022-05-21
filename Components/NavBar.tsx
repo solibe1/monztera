@@ -12,6 +12,8 @@ const navigation = [
 	{ name: 'Home', href: 'Home', current: false },
 	{ name: 'About', href: 'About', current: false },
 	{ name: 'Team', href: 'Team', current: false },
+	{ name: 'Mint', href: 'Mint', current: false },
+
 ]
 
 function classNames(...classes: any) {
@@ -102,11 +104,17 @@ export default function Navbar() {
 										<Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
 											<Menu.Item>
 												{({ active }) => (
-													<a
-														href="/mintnft"
-														className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-													>
-														Mint an NFT
+													<a className='cursor-pointer'>
+														<Link
+															key="Mint"
+															to="Mint"
+															smooth={true}
+															duration={500}
+															offset={-60}
+															className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+														>
+															Mint an NFT
+														</Link>
 													</a>
 												)}
 											</Menu.Item>

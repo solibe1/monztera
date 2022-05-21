@@ -13,7 +13,7 @@ function Mint() {
 	return (
 
 
-		<div className='bg-gradient-to-r from-[#eecda3] to-[#ef629f]'>
+		<div id='Mint' className='bg-gradient-to-r from-[#eecda3] to-[#ef629f]'>
 			<h1 className='text-6xl text-center font-bold pt-8 py-3'>Mint your
 				<span className='relative'>
 					<span className="block absolute -inset-1 -skew-y-3 bg-cyan-500"></span>

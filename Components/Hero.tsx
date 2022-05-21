@@ -65,7 +65,7 @@ function Hero() {
 						{address ? "wallet connected" : "connect your wallet"}
 					</Button>
 				</div>
-				<div className=' pr-5 w-full hidden md:inline-flex ms:pr-0 '>
+				<div className=' pr-5 w-full hidden md:inline-flex ms:pr-0  duration-500 hover:-translate-y-1 '>
 					<Image className='object-cover' src={monster1} alt="monster1" />
 
 				</div>

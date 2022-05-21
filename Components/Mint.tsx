@@ -1,14 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import monsters from '../images/monsters.gif'
+import { useNFTDrop, useAddress } from '@thirdweb-dev/react'
 
 import { Button } from './Hero'
+import { BigNumber } from 'ethers'
 
 
 
 
 function Mint() {
+	const [claimed, setClaimed] = React.useState<number>(0)
+	const [totalSupply, setTotalSupply] = React.useState<BigNumber>()
+	const address = useAddress()
+	const nftDrop = useNFTDrop("0x712F1513B241e84b2be0c1459E7198a4916a6467")
 
+
+	useEffect(() => {
+		if (!nftDrop) return
+
+		const fetchNftData = async () => {
+			const claimed = await nftDrop.getAllClaimed()
+			const total = await nftDrop.totalSupply()
+			setClaimed(claimed.length)
+			setTotalSupply(total)
+		}
+		fetchNftData();
+	}, [nftDrop])
 
 	return (
 
@@ -27,7 +45,8 @@ function Mint() {
 
 
 					<Image src={monsters} />
-					<p className='text-center'>NFT claimed 0/20</p>
+					<p className='text-center w-auto  rounded-md bg-white py-3 px-4 font-poppins text-lg font-medium uppercase text-pink-600 shadow-lg dark:bg-black dark:text-green-500 lg:mb-0'>
+						NFT claimed {claimed}/{totalSupply?.toString()}</p>
 
 				</div>
 				<div className='pb-5'>

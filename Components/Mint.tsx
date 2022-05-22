@@ -41,7 +41,7 @@ function Mint() {
 
 
 					<Image src={monsters} />
-					<p className='text-center w-auto  rounded-md bg-white py-3 px-4 font-poppins text-lg font-medium uppercase text-pink-600 shadow-lg dark:bg-black dark:text-green-500 lg:mb-0'>
+					<p className='text-center w-auto  rounded-md bg-white py-3 px-4 font-poppins text-lg font-medium uppercase text-pink-600 shadow-lg  lg:mb-0'>
 						NFT supply left: {totalSupply?.toString()}</p>
 
 				</div>

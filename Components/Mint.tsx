@@ -10,19 +10,15 @@ import { BigNumber } from 'ethers'
 
 
 function Mint() {
-	const [claimed, setClaimed] = React.useState<number>(0)
 	const [totalSupply, setTotalSupply] = React.useState<BigNumber>()
-	const address = useAddress()
-	const nftDrop = useNFTDrop("0x712F1513B241e84b2be0c1459E7198a4916a6467")
+	const nftDrop = useNFTDrop("0x712F1513B241e84b2be0c1459E7198a4916a6467") //smart contract address of nft drop
 
 
 	useEffect(() => {
 		if (!nftDrop) return
 
 		const fetchNftData = async () => {
-			const claimed = await nftDrop.getAllClaimed()
-			const total = await nftDrop.totalSupply()
-			setClaimed(claimed.length)
+			const total = await nftDrop.totalUnclaimedSupply()
 			setTotalSupply(total)
 		}
 		fetchNftData();
@@ -46,7 +42,7 @@ function Mint() {
 
 					<Image src={monsters} />
 					<p className='text-center w-auto  rounded-md bg-white py-3 px-4 font-poppins text-lg font-medium uppercase text-pink-600 shadow-lg dark:bg-black dark:text-green-500 lg:mb-0'>
-						NFT claimed {claimed}/{totalSupply?.toString()}</p>
+						NFT supply left: {totalSupply?.toString()}</p>
 
 				</div>
 				<div className='pb-5'>

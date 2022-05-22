@@ -44,12 +44,12 @@ function Mint() {
 
 
 					<Image src={monsters} />
+					<p className='text-center w-auto  rounded-md bg-white py-3 px-4 font-poppins text-lg font-medium uppercase text-pink-600 shadow-lg  lg:mb-0'>
+						{loading ? <>loading supply...</>
+							: <> NFT supplies left: {totalSupply?.toString()}</>
 
-					{loading ? <p className='animate-pulse text-center w-auto  rounded-md bg-white py-3 px-4 font-poppins text-lg font-medium uppercase text-pink-600 shadow-lg  lg:mb-0'>loading supply...</p>
-						: <p className='text-center w-auto  rounded-md bg-white py-3 px-4 font-poppins text-lg font-medium uppercase text-pink-600 shadow-lg  lg:mb-0'>
-							NFT supplies left: {totalSupply?.toString()}
-						</p>}
-
+						}
+					</p>
 
 
 

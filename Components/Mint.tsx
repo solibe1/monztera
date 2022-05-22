@@ -34,7 +34,16 @@ function Mint() {
 
 	const mintNFT = () => {
 		const quantity = 1
+		setLoading(true)
 		nftDrop?.claimTo(address, quantity)
+
+			.catch((err) => {
+				console.log(err)
+			})
+
+			.finally(() => {
+				setLoading(false)
+			})
 
 	}
 

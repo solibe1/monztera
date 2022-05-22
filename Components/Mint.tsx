@@ -14,6 +14,7 @@ function Mint() {
 	const nftDrop = useNFTDrop("0x712F1513B241e84b2be0c1459E7198a4916a6467") //smart contract address of nft drop
 	const [loading, setLoading] = React.useState<boolean>(true)
 	const [price, setPrice] = React.useState<string>()
+	const address = useAddress() ?? "";
 
 
 	useEffect(() => {
@@ -32,7 +33,8 @@ function Mint() {
 
 
 	const mintNFT = () => {
-		console.log("minting")
+		const quantity = 1
+		nftDrop?.claimTo(address, quantity)
 
 	}
 

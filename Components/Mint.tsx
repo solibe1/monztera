@@ -12,14 +12,17 @@ import { BigNumber } from 'ethers'
 function Mint() {
 	const [totalSupply, setTotalSupply] = React.useState<BigNumber>()
 	const nftDrop = useNFTDrop("0x712F1513B241e84b2be0c1459E7198a4916a6467") //smart contract address of nft drop
+	const [loading, setLoading] = React.useState<boolean>(true)
 
 
 	useEffect(() => {
 		if (!nftDrop) return
 
 		const fetchNftData = async () => {
+			setLoading(true);
 			const total = await nftDrop.totalUnclaimedSupply()
 			setTotalSupply(total)
+			setLoading(false);
 		}
 		fetchNftData();
 	}, [nftDrop])
@@ -41,8 +44,15 @@ function Mint() {
 
 
 					<Image src={monsters} />
-					<p className='text-center w-auto  rounded-md bg-white py-3 px-4 font-poppins text-lg font-medium uppercase text-pink-600 shadow-lg  lg:mb-0'>
-						NFT supply left: {totalSupply?.toString()}</p>
+
+					{loading ? <p className='animate-pulse text-center w-auto  rounded-md bg-white py-3 px-4 font-poppins text-lg font-medium uppercase text-pink-600 shadow-lg  lg:mb-0'>loading supply...</p>
+						: <p className='text-center w-auto  rounded-md bg-white py-3 px-4 font-poppins text-lg font-medium uppercase text-pink-600 shadow-lg  lg:mb-0'>
+							NFT supplies left: {totalSupply?.toString()}
+						</p>}
+
+
+
+
 
 				</div>
 				<div className='pb-5'>
